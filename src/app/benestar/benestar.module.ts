@@ -8,7 +8,7 @@ import { BenestarRoutingModule } from './benestar-routing.module';
 import { BenestarComponent } from './benestar.component';
 
 import { DavidComponent } from './david/david.component';
-import { SergiComponent } from './sergi/sergi.component';
+import { OrganitzacionsComponent } from './organitzacions/organitzacions.component';
 import { JaumeMGComponent } from './jaume-mg/jaume-mg.component';
 import { JaumeCComponent } from './jaume-c/jaume-c.component';
 
@@ -24,7 +24,7 @@ import { JaumeCComponent } from './jaume-c/jaume-c.component';
       BenestarComponent,
       DavidComponent,
       JaumeCComponent,
-      SergiComponent,
+      OrganitzacionsComponent,
       JaumeMGComponent]
 })
 export class BenestarModule { }

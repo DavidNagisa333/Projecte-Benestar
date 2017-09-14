@@ -1,118 +1,56 @@
 <html>
     <head>
     </head>
-    <body>        
-<img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
-     <div id="cssmenu" *ngIf="logged">
+    <body>               
+        <div class="navbar">
+               <div class="navbar-inner">
+                 <div class="container">
+                    <a class="brand" routerLink="/app-sergi"> <img src="http://www.gencat.cat/img2/temp/escudo_tcm32-28377.gif"></a>
+                 </div>
+               </div>
+             </div> 
         
-
-        <ul>
-            <!--<li>
-                <a routerLink="/home" routerLinkActive="active">Home</a>
-            </li>-->
-            <li class="has-sub">
-            <!--<a routerLink="/professor" routerLinkActive="active" href="index.html">Professors</a>-->
-              <a routerLink="/app-sergi" routerLinkActive="active">Sergi</a>
-              <!--<ul>
-                  <li><a routerLink="/consultar-profe" routerLinkActive="active">Consultar dades</a></li>
-                  <li><a routerLink="/crear-profe" routerLinkActive="active">Alta professor</a></li>
-                  <li><a routerLink="/esborrar-profe" routerLinkActive="active">Baixa professor</a></li>
-                  <li><a routerLink="/modificar-profe" routerLinkActive="active">Modificar dades</a></li>
-              </ul>-->
-          </li>
-          <li class="has-sub">
-            <a routerLink="/app-david" routerLinkActive="active">David</a>
-            <!--<ul>
-              <li><a routerLink="/addCurs" routerLinkActive="active">Add</a></li>
-              <li><a routerLink="/putCurs" routerLinkActive="active">Put</a></li>
-              <li><a routerLink="/listCurs" routerLinkActive="active">List</a></li>
-              <li><a routerLink="/delCurs" routerLinkActive="active">Del</a></li>
-                <li><a routerLink="/cursaula" routerLinkActive="active">Cursaula</a></li>
-            </ul>  -->
-          </li>
-          <li class="has-sub">
-            <a  routerLink="/app-jaume-mg" routerLinkActive="active">Jaume-mg</a>
-            <!--<ul>
-              <li><a routerLink="/addCentre" routerLinkActive="active">Add</a></li>
-               <li><a routerLink="/addLocalitat" routerLinkactive="active">AddLocalitat</a></li>
-              <li><a routerLink="/putCentre" routerLinkActive="active">Put</a></li>
-
-              <li><a routerLink="/listCentre" routerLinkActive="active">List</a></li>
-              <li><a routerLink="/delCentre" routerLinkActive="active">Del</a></li>
-            </ul>  -->
-          <li class="has-sub">
-            <a routerLink="/app-jaume-c" routerLinkActive="active">Jaume-c</a>
-              <!--<ul>
-                  <li class="has-sub">
-                      <a routerLink="/alumneTools" routerLinkActive="active">Editar alumnes</a>
-                      <ul>
-                      <li>
-                        <a routerLink="/addAlumne" routerLinkActive="active">Afegir alumnes</a>
-                      </li>
-                        <li class="has-sub">                    
-
-                            <a routerLink="/listAlumne" routerLinkActive="active">Mostrar alumnes</a>
-                            <ul>
-                                <li>
-                                    <a routerLink="/listAlumneId" routerLinkActive="active">Mostrar per Id</a>
-                                </li>
-                                <li>
-                                    <a routerLink="/listAlumneAll" routerLinkActive="active">Mostrar tots els alumnes</a>
-                                </li>
-                            </ul>
-                        </li>
-                      <li>
-                        <a routerLink="/updateAlumne" routerLinkActive="active">Actualitzar alumnes</a>
-                      </li>
-                      <li>
-                        <a class="delete" routerLink="/delAlumne" routerLinkActive="active">Esborrar alumnes</a> 
-                          </li>
-                    </ul>                       
-                  </li>
-                  <li class="has-sub">
-                      <a routerLink="/hobbyTools" routerLinkActive="active">Editar hobbies</a>
-                      <ul>
-                      <li>
-                        <a routerLink="/addHobby" routerLinkActive="active">Afegir hobbies</a>
-                      </li>
-                        <li class="has-sub">                    
-
-                            <a routerLink="/listHobby" routerLinkActive="active">Mostrar hobbies</a>
-                            <ul>
-                                <li>
-                                    <a routerLink="/listHobbyId" routerLinkActive="active">Mostrar per Id</a>
-                                </li>
-                                <li>
-                                    <a routerLink="/listHobbyAll" routerLinkActive="active">Mostrar tots els hobbies</a>
-                                </li>
-                            </ul>
-                        </li>   
-                      <li>
-                        <a class="delete" routerLink="/delHobby" routerLinkActive="active">Esborrar hobbies</a> 
-                          </li>
-                    </ul>   
-                  <li>
-                      <a routerLink="/formulariS" routerLinkActive="active">Formulari</a>
+        
+         <nav class="navbar navbar-default" *ngIf="logged">    
+             <div class="container">
+                 <div class="navbar-header">
+                    <a class="navbar-brand" href="http://web.gencat.cat/ca/inici/">Home</a>
+                 </div>
+                 <ul class="nav navbar-nav">                 
+                     <li>
+                        <a routerLink="/organitzacions" routerLinkActive="active">Organitzacions</a>
+                     </li>
+                     <li>
+                        <a routerLink="/app-david" routerLinkActive="active">David</a>
+                     </li>
+                     <li>
+                        <a routerLink="/app-jaume-mg" routerLinkActive="active">Jaume-mg</a>
+                     <li>
+                        <a routerLink="/app-jaume-c" routerLinkActive="active">Jaume-c</a>
+                     </li>
+                 </ul>
+                 <ul class="nav navbar-nav navbar-right">
+                     <li>
+                        <a (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                     </li>                     
+                 </ul>
+            </div> 
+        </nav>
+        <nav class="navbar navbar-default" *ngIf="!logged">    
+             <div class="container">
+                 <div class="navbar-header">
+                    <a class="navbar-brand">Home</a>
+                 </div>
+                 <ul class="nav navbar-nav navbar-right">
+                 <li>
+                 <a routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span> Login</a>
                 </li>
-              </ul>-->
-          </li>
-            <li class="logout">
-                <a class="logout" (click)="logout()">Logout</a>
-            </li>
-       </ul>
-    </div>  
-    <div id="cssmenu" *ngIf="!logged">
-        <ul>
-           <!-- <li>
-                <a routerLink="/home" routerLinkActive="active">Home</a>
-            </li>-->
-             <li>
-             <a routerLink="/login" routerLinkActive="active">Login</a>
-            </li>
-        </ul>
-    </div>
-<router-outlet></router-outlet>
-    
-        </body>
+            </ul>
+            </div> 
+        </nav>
+        
+        <router-outlet></router-outlet>
+        
+    </body>
 </html>
 
