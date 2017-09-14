@@ -5,24 +5,28 @@
         <div class="navbar">
                <div class="navbar-inner">
                  <div class="container">
-                    <a class="brand" routerLink="/app-sergi"> <img src="http://www.gencat.cat/img2/temp/escudo_tcm32-28377.gif"></a>
+                    <a class="brand" href="http://web.gencat.cat/ca/inici/"> <img src="http://www.gencat.cat/img2/temp/escudo_tcm32-28377.gif"></a>
                  </div>
                </div>
              </div> 
         
+<<<<<<< HEAD
         
          <nav class="navbar navbar-default" *ngIf="logged">
          <nav class="navbar navbar-default">
+=======
+         <nav class="navbar navbar-default" *ngIf="logged">    
+>>>>>>> a24de3cb55f14212ee59f232a7066c282cd1d5e0
              <div class="container">
                  <div class="navbar-header">
-                    <a class="navbar-brand" href="http://web.gencat.cat/ca/inici/">Home</a>
+                    <a class="navbar-brand" routerLink="/home">Home</a>
                  </div>
                  <ul class="nav navbar-nav">                 
                      <li>
                         <a routerLink="/organitzacions" routerLinkActive="active">Organitzacions</a>
                      </li>
                      <li>
-                        <a routerLink="/app-david" routerLinkActive="active">David</a>
+                        <a routerLink="/app-serveis" routerLinkActive="active">Cartera de Serveis</a>
                      </li>
                      <li>
                         <a routerLink="/app-jaume-mg" routerLinkActive="active">Jaume-mg</a>
@@ -40,11 +44,12 @@
         <nav class="navbar navbar-default" *ngIf="!logged">    
              <div class="container">
                  <div class="navbar-header">
-                    <a class="navbar-brand">Home</a>
+                    <a class="navbar-brand" routerLink="/home">Home</a>
                  </div>
                  <ul class="nav navbar-nav navbar-right">
                  <li>
                  <a routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+>>>>>>> c94213f59440cc7579e7174ef6c9976c829ca5b4
                 </li>
             </ul>
             </div> 
