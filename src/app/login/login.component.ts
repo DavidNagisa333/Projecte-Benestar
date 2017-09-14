@@ -10,7 +10,7 @@ import { RouterModule,Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
   providers: [ LoginService ]
 })
-export class LoginComponent{
+export class LoginComponent implements OnInit{
     
     model: any = {};
     loading = false;
