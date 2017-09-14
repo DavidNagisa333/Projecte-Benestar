@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {OrganitzacionsComponent} from './organitzacions/organitzacions.component';
 import { ServeisComponent } from './serveis/serveis.component';
+import { JaumeMGComponent } from './jaume-mg/jaume-mg.component';
 
 const routes: Routes = [
     {
@@ -13,6 +14,11 @@ const routes: Routes = [
       {
     path: 'app-serveis',
     component: ServeisComponent,
+    children: []
+    },
+    {
+    path: 'app-jaume-mg',
+    component: JaumeMGComponent,
     children: []
     }
 ];
