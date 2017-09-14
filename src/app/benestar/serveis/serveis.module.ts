@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DavidRoutingModule } from './david-routing.module';
+import { ServeisRoutingModule } from './serveis-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    DavidRoutingModule
+    ServeisRoutingModule
   ],
   declarations: []
 })
-export class DavidModule { }
+export class ServeisModule { }

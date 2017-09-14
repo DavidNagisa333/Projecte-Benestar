@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DavidComponent } from './benestar/david/david.component';
+import { ServeisComponent } from './benestar/serveis/serveis.component';
 import { SergiComponent } from './benestar/sergi/sergi.component';
 import { JaumeMGComponent } from './benestar/jaume-mg/jaume-mg.component';
 import { JaumeCComponent } from './benestar/jaume-c/jaume-c.component';
@@ -13,8 +13,8 @@ const routes: Routes = [
     children: []
     },
     {
-    path: 'app-david',
-    component: DavidComponent,
+    path: 'app-serveis',
+    component: ServeisComponent,
     children: []
     },
     {
