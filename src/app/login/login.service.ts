@@ -20,7 +20,6 @@ export class LoginService {
    
    login(username: string, password: string): Observable<boolean> {
        let body:any = { "username": username, "password": password };
-       console.log(password);
        return this.http.post(this.authUrl,body, {headers: this.headers})
            .map((response: Response) => {
                // login successful if there's a jwt token in the response

@@ -5,7 +5,7 @@
         <div class="navbar">
                <div class="navbar-inner">
                  <div class="container">
-                    <a class="brand" routerLink="/app-sergi"> <img src="http://www.gencat.cat/img2/temp/escudo_tcm32-28377.gif"></a>
+                    <a class="brand" href="http://web.gencat.cat/ca/inici/"> <img src="http://www.gencat.cat/img2/temp/escudo_tcm32-28377.gif"></a>
                  </div>
                </div>
              </div> 
@@ -14,7 +14,7 @@
          <nav class="navbar navbar-default" *ngIf="logged">    
              <div class="container">
                  <div class="navbar-header">
-                    <a class="navbar-brand" href="http://web.gencat.cat/ca/inici/">Home</a>
+                    <a class="navbar-brand" routerLink="/home">Home</a>
                  </div>
                  <ul class="nav navbar-nav">                 
                      <li>
@@ -39,7 +39,7 @@
         <nav class="navbar navbar-default" *ngIf="!logged">    
              <div class="container">
                  <div class="navbar-header">
-                    <a class="navbar-brand">Home</a>
+                    <a class="navbar-brand" routerLink="/home">Home</a>
                  </div>
                  <ul class="nav navbar-nav navbar-right">
                  <li>

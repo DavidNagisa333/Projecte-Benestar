@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { BenestarModule } from './benestar/benestar.module';
+import { HomeModule } from './benestar/home.module';
 
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
@@ -19,7 +19,7 @@ import { LoginService } from './login/login.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BenestarModule,
+    HomeModule,
     HttpModule,
     FormsModule
   ],

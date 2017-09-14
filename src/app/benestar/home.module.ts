@@ -4,8 +4,8 @@ import {AppRoutingModule} from '../app-routing.module';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 
-import { BenestarRoutingModule } from './benestar-routing.module';
-import { BenestarComponent } from './benestar.component';
+import { HomeRoutingModule } from './home-routing.module';
+import { HomeComponent } from './home.component';
 
 import { DavidComponent } from './david/david.component';
 import { OrganitzacionsComponent } from './organitzacions/organitzacions.component';
@@ -15,19 +15,19 @@ import { JaumeCComponent } from './jaume-c/jaume-c.component';
 @NgModule({
   imports: [
     CommonModule,
-    BenestarRoutingModule,
+    HomeRoutingModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
   declarations: [
-      BenestarComponent,
+      HomeComponent,
       DavidComponent,
       JaumeCComponent,
       OrganitzacionsComponent,
       JaumeMGComponent]
 })
-export class BenestarModule { }
+export class HomeModule { }
 
 
 /*import { NgModule } from '@angular/core';
