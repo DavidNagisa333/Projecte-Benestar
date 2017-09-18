@@ -7,7 +7,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
-import { DavidComponent } from './david/david.component';
+
+import { ServeisComponent } from './serveis/serveis.component';
 import { OrganitzacionsComponent } from './organitzacions/organitzacions.component';
 import { JaumeMGComponent } from './jaume-mg/jaume-mg.component';
 import { JaumeCComponent } from './jaume-c/jaume-c.component';
@@ -21,10 +22,15 @@ import { JaumeCComponent } from './jaume-c/jaume-c.component';
     AppRoutingModule
   ],
   declarations: [
+      ServeisComponent,
       HomeComponent,
-      DavidComponent,
       JaumeCComponent,
       OrganitzacionsComponent,
       JaumeMGComponent]
 })
+<<<<<<< HEAD
 export class HomeModule { }
+=======
+
+export class HomeModule { }
+>>>>>>> a8f03fcd05bad8cd2da60c90fcbc1a700281b9c2
