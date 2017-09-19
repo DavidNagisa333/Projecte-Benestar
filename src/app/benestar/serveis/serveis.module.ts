@@ -1,13 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
+import { PrestacioComponent } from './prestacions/prestacio.component';
+import { PrestacioRoutingModule } from './prestacions/prestacio-routing.module';
+import { HomeRoutingModule } from '../home-routing.module';
+//import { AppRoutingModule } from '../../app-routing.module';
 import { ServeisRoutingModule } from './serveis-routing.module';
+import { ServeisComponent } from './serveis.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    ServeisRoutingModule
+    ServeisRoutingModule,
+    BrowserModule,
+    FormsModule,s
+    //PrestacioRoutingModule,
+    //HomeRoutingModule,
+    //AppRoutingModule,
+      
   ],
-  declarations: []
+  declarations: [PrestacioComponent, ServeisComponent]
 })
 export class ServeisModule { }
