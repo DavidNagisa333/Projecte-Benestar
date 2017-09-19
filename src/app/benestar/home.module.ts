@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {AppRoutingModule} from '../app-routing.module';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 
 import { HomeRoutingModule } from './home-routing.module';
+import {AppRoutingModule} from '../app-routing.module';
+
 import { HomeComponent } from './home.component';
 
 
