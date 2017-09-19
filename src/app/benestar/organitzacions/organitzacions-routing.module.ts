@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import {ProvaComponent} from './prova/prova.component';
+
+const routes: Routes = [
+    {
+    path: 'prova',
+    component: ProvaComponent,
+    children: []
+    }]
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class OrganitzacionsRoutingModule { }
