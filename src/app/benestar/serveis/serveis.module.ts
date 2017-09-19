@@ -8,6 +8,7 @@ import { HomeRoutingModule } from '../home-routing.module';
 import { AppRoutingModule } from '../../app-routing.module';
 import { ServeisRoutingModule } from './serveis-routing.module';
 import { ServeisComponent } from './serveis.component';
+import { PrestacionsComponent } from './prestacions/prestacions.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,8 @@ import { ServeisComponent } from './serveis.component';
     AppRoutingModule,
       
   ],
-  declarations: [PrestacioComponent, ServeisComponent]
+  declarations: [PrestacioComponent,
+                 ServeisComponent,
+                 PrestacionsComponent]
 })
 export class ServeisModule { }

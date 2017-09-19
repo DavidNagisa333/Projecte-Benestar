@@ -29,9 +29,5 @@ import { JaumeCComponent } from './jaume-c/jaume-c.component';
       OrganitzacionsComponent,
       JaumeMGComponent]
 })
-<<<<<<< HEAD
 export class HomeModule { }
-=======
 
-export class HomeModule { }
->>>>>>> a8f03fcd05bad8cd2da60c90fcbc1a700281b9c2
