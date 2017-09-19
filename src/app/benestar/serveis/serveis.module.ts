@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 
 
 import { PrestacioComponent } from './prestacions/prestacio.component';
-//import { PrestacioRoutingModule } from './prestacions/prestacio-routing.module';
+import { PrestacioRoutingModule } from './prestacions/prestacio-routing.module';
 import { HomeRoutingModule } from '../home-routing.module';
-import { AppRoutingModule } from '../../app-routing.module';
+//import { AppRoutingModule } from '../../app-routing.module';
 import { ServeisRoutingModule } from './serveis-routing.module';
 import { ServeisComponent } from './serveis.component';
 import { PrestacionsComponent } from './prestacions/prestacions.component';
@@ -14,9 +14,11 @@ import { PrestacionsComponent } from './prestacions/prestacions.component';
   imports: [
     CommonModule,
     ServeisRoutingModule,
-   // PrestacioRoutingModule,
-    HomeRoutingModule,
-    AppRoutingModule,
+    BrowserModule,
+    FormsModule,s
+    //PrestacioRoutingModule,
+    //HomeRoutingModule,
+    //AppRoutingModule,
       
   ],
   declarations: [PrestacioComponent,
