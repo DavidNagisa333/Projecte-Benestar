@@ -28,5 +28,9 @@ import {ProvaComponent} from './organitzacions/prova/prova.component';
       JaumeCComponent,
       JaumeMGComponent]
 })
+<<<<<<< HEAD
+=======
+
+>>>>>>> f6cce1a5de1423736a7a86b9ce47ceb90dfb4f6b
 
 export class HomeModule { }
