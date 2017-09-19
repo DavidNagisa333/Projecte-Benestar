@@ -7,11 +7,12 @@ import {BrowserModule} from '@angular/platform-browser';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
-
 import { ServeisComponent } from './serveis/serveis.component';
 import { OrganitzacionsComponent } from './organitzacions/organitzacions.component';
-import { JaumeMGComponent } from './jaume-mg/jaume-mg.component';
+import { PersonesComponent, Ordre } from './persones/persones.component';
 import { JaumeCComponent } from './jaume-c/jaume-c.component';
+
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   imports: [
@@ -19,14 +20,16 @@ import { JaumeCComponent } from './jaume-c/jaume-c.component';
     HomeRoutingModule,
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   declarations: [
       ServeisComponent,
       HomeComponent,
       JaumeCComponent,
       OrganitzacionsComponent,
-      JaumeMGComponent]
+      PersonesComponent,
+      Ordre]
 })
 
 export class HomeModule { }

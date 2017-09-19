@@ -10,13 +10,9 @@
                </div>
              </div> 
         
-<<<<<<< HEAD
-        
+
          <nav class="navbar navbar-default" *ngIf="logged">
-         <nav class="navbar navbar-default">
-=======
-         <nav class="navbar navbar-default" *ngIf="logged">    
->>>>>>> a24de3cb55f14212ee59f232a7066c282cd1d5e0
+         <nav class="navbar navbar-default">    
              <div class="container">
                  <div class="navbar-header">
                     <a class="navbar-brand" routerLink="/home">Home</a>
@@ -29,7 +25,7 @@
                         <a routerLink="/app-serveis" routerLinkActive="active">Cartera de Serveis</a>
                      </li>
                      <li>
-                        <a routerLink="/app-jaume-mg" routerLinkActive="active">Jaume-mg</a>
+                        <a routerLink="/app-persones" routerLinkActive="active">Persones</a>
                      <li>
                         <a routerLink="/app-jaume-c" routerLinkActive="active">Jaume-c</a>
                      </li>
@@ -41,6 +37,7 @@
                  </ul>
             </div> 
         </nav>
+
         <nav class="navbar navbar-default" *ngIf="!logged">    
              <div class="container">
                  <div class="navbar-header">
@@ -49,7 +46,6 @@
                  <ul class="nav navbar-nav navbar-right">
                  <li>
                  <a routerLink="/login" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span> Login</a>
->>>>>>> c94213f59440cc7579e7174ef6c9976c829ca5b4
                 </li>
             </ul>
             </div> 

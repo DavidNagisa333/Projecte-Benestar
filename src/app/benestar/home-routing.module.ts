@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {OrganitzacionsComponent} from './organitzacions/organitzacions.component';
 import { ServeisComponent } from './serveis/serveis.component';
-import { JaumeMGComponent } from './jaume-mg/jaume-mg.component';
+import { PersonesComponent } from './persones/persones.component';
+
 
 const routes: Routes = [
     {
@@ -17,15 +18,15 @@ const routes: Routes = [
     children: []
     },
     {
-    path: 'app-jaume-mg',
-    component: JaumeMGComponent,
+    path: 'app-persones',
+    component: PersonesComponent,
     children: []
     }
 ];
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 
