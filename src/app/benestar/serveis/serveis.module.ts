@@ -11,6 +11,7 @@ import { ServeisComponent } from './serveis.component';
 import { PrestacioModule } from './prestacions/prestacio.module';
 import { CopagamentModule } from './copagaments/copagament.module';
 import { ServeiSocialModule } from './serveisSocials/serveiSocial.module';
+import {BrowserModule} from '@angular/platform-browser';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { ServeiSocialModule } from './serveisSocials/serveiSocial.module';
     PrestacioModule,
     CopagamentModule,
     ServeiSocialModule,
+    
     FormsModule
   ],
   declarations: [ServeisComponent,
