@@ -10,15 +10,15 @@ import { AddPrestacioComponent } from './addPrestacio/addPrestacio.component';
 import { DelPrestacioComponent } from './delPrestacio/delPrestacio.component';
 import { PutPrestacioComponent } from './putPrestacio/putPrestacio.component';
 import { AllPrestacioComponent } from './allPrestacio/allPrestacio.component';
-import { PrestacioComponent } from './Prestacio.component';
+import { PrestacioComponent } from './prestacio.component';
+
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    ServeisRoutingModule,
-    //HomeRoutingModule,
-    //AppRoutingModule,
-    PrestacioRoutingModule
+    PrestacioRoutingModule,
+       FormsModule
   ],
   declarations: [AddPrestacioComponent,
                  PutPrestacioComponent,
@@ -26,4 +26,4 @@ import { PrestacioComponent } from './Prestacio.component';
                  AllPrestacioComponent,
                  PrestacioComponent]
 })
-export class ServeisModule { }
+export class PrestacioModule { }

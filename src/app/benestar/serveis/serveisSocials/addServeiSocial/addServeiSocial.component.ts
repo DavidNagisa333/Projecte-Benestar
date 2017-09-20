@@ -1,25 +1,24 @@
-import {Component, OnInit, NgModule} from '@angular/core';
-import {PrestacioService} from '../prestacio.service';
-import {AddPrestacioService} from './addPrestacio.service';
-
+import {Component, OnInit} from '@angular/core';
+//import {ServeisService} from '../../serveis.service';
+import {AddServeiSocialService} from './addServeiSocial.service';
 
 
 
 @Component({
-  selector: 'addPrestacio',
-  templateUrl:'./addPrestacio.component.html',
+  selector: 'addServeiSocial',
+  templateUrl:'./addServeiSocial.component.html',
   //styleUrls: ['../../.css'],
-  providers: [AddPrestacioService]
+  providers: [AddServeiSocialService]
 })
 
-    export class AddPrestacioComponent{
+    export class AddServeiSocialComponent{
         
         addDescripcio;addTipus;addnomcentre;addidcentre;values;error;finished;errorBuit;errorServer;errorN;
         
         
- constructor(private addPrestacioService: AddPrestacioService) { 
-      
-                /*this.addCursService.addCursPost(this.addid,this.addnom,this.addidcentre,this.addnomcentre)
+ constructor(private addServeiSocialService: AddServeiSocialService) { } 
+        
+     addServeiSocial(){        /*this.addCursService.addCursPost(this.addid,this.addnom,this.addidcentre,this.addnomcentre)
                .catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {
                    console.log("Servidor Parat"); 

@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+
 import { PrestacioService } from './prestacio.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Routes, Router } from '@angular/router';
 
-
 @Component({
-    selector: '/prestacio',
+    selector: 'app-prestacio',
     templateUrl: './prestacio.component.html',
     //styleUrls: ['../escola.css'],
-    //providers: [PrestacioService]
+    providers: [PrestacioService]
 })
 
 
 export class PrestacioComponent implements OnInit {
-     constructor() { }
 
   ngOnInit() {
   }
-    //constructor(private prestacioService: PrestacioService) { }
+    constructor(private prestacioService: PrestacioService) { }
 }
