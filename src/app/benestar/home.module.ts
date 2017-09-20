@@ -13,6 +13,7 @@ import { JaumeMGComponent } from './jaume-mg/jaume-mg.component';
 import { JaumeCComponent } from './jaume-c/jaume-c.component';
 import {OrganitzacionsModule} from './organitzacions/organitzacions.module';
 import {ProvaComponent} from './organitzacions/prova/prova.component';
+import {ServeisModule} from './serveis/serveis.module';
 
 @NgModule({
   imports: [
@@ -20,13 +21,12 @@ import {ProvaComponent} from './organitzacions/prova/prova.component';
     HomeRoutingModule,
     BrowserModule,
     FormsModule,
-    OrganitzacionsModule
+    OrganitzacionsModule,
+    ServeisModule
   ],
   declarations: [
-      ServeisComponent,
-      HomeComponent,
-      JaumeCComponent,
-      JaumeMGComponent]
+      HomeComponent
+  ]
 })
 
 export class HomeModule { }
