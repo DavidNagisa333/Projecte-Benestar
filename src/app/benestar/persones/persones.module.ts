@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
 
 //import { NgxPaginationModule } from 'ngx-pagination';
+import { Ordre, PersonesComponent } from './persones.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 //import { JaumeMGComponent } from './jaume-mg.component';
 
@@ -14,9 +18,11 @@ import { CrearPersonaComponent } from './crear-persona/crear-persona.component';
 @NgModule({
   imports: [
     CommonModule,
+    BrowserModule,
+    FormsModule,
+    NgxPaginationModule
     //JaumeMGRoutingModule,
-    //NgxPaginationModule
   ],
-  declarations: [/*JaumeMGComponent, LlistarPersonaComponent, ModificarPersonaComponent, EsborrarPersonaComponent, CrearPersonaComponent*/]
+  declarations: [PersonesComponent, Ordre/*JaumeMGComponent, LlistarPersonaComponent, ModificarPersonaComponent, EsborrarPersonaComponent, CrearPersonaComponent*/]
 })
 export class PersonesModule { }
