@@ -20,7 +20,6 @@ import { ServeiSocialModule } from './serveisSocials/serveiSocial.module';
     CopagamentModule,
     ServeiSocialModule,
     FormsModule
-
   ],
   declarations: [ServeisComponent,
                // PrestacioComponent
