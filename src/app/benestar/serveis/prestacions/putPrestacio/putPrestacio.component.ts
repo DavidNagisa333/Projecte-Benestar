@@ -6,7 +6,7 @@ import {PutPrestacioService} from './putPrestacio.service';
 
 @Component({
   selector: 'putPrestacio',
-  templateUrl:'./PutPrestacio.component.html',
+  templateUrl:'./putPrestacio.component.html',
   //styleUrls: ['../../escola.css'],
   providers: [PutPrestacioService]
 })
