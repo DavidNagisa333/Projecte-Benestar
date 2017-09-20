@@ -12,7 +12,7 @@ import { LlistarPersonaComponent } from './llistar-persona/llistar-persona.compo
 import { ModificarPersonaComponent } from './modificar-persona/modificar-persona.component';
 import { EsborrarPersonaComponent } from './esborrar-persona/esborrar-persona.component';
 import { CrearPersonaComponent } from './crear-persona/crear-persona.component';*/
-import {PersonesComponent} from './persones.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -20,12 +20,7 @@ import {PersonesComponent} from './persones.component';
     //JaumeMGRoutingModule,
     //NgxPaginationModule
   ],
-<<<<<<< HEAD
+
   declarations: [PersonesComponent/*JaumeMGComponent, LlistarPersonaComponent, ModificarPersonaComponent, EsborrarPersonaComponent, CrearPersonaComponent*/]
-=======
-  declarations: [/*JaumeMGComponent, LlistarPersonaComponent, ModificarPersonaComponent, EsborrarPersonaComponent, CrearPersonaComponent*/
-  PersonesComponent
-  ]
->>>>>>> 363d459a32b04c4553fd695ae928ff3848e5e2c8
 })
 export class PersonesModule { }
