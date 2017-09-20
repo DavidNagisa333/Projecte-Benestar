@@ -15,7 +15,7 @@ export class OrganitzacionsComponent implements OnInit {
     }
     
     //Funció que afageix una organització
-    
+    /*
     addOrganitzacio(){        this.organitzacionsService.addOrganitzacio(this.id,this.nom,this.telefon)
                .catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {
@@ -82,6 +82,6 @@ export class OrganitzacionsComponent implements OnInit {
                 data => this.alumnes = data,
                 err => console.error(err))
          
-    } 
+    } */
         
 }
