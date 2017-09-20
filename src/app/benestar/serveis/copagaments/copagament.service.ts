@@ -10,6 +10,6 @@ import { sprintf } from "sprintf-js";
 @Injectable()
 
 
-export class PrestacioService {
+export class CopagamentService {
     constructor(private http: Http) { }
 }

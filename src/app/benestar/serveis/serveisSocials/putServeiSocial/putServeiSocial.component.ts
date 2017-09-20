@@ -1,24 +1,24 @@
 import {Component, OnInit} from '@angular/core';
 import {Http, Headers,Response} from '@angular/http';
 import {Routes,Router} from '@angular/router';
-import {PutPrestacioService} from './putPrestacio.service';
+import {PutServeiSocialService} from './putServeiSocial.service';
 
 
 @Component({
-  selector: 'putPrestacio',
-  templateUrl:'./putPrestacio.component.html',
+  selector: 'putServeiSocial',
+  templateUrl:'./putServeiSocial.component.html',
   //styleUrls: ['../../escola.css'],
-  providers: [PutPrestacioService]
+  providers: [PutServeiSocialService]
 })
 
-    export class PutPrestacioComponent{
+    export class PutServeiSocialComponent{
         
     putId;putTipus;putDescripcio;putnomcentre;values;errorBuit;finished;errorServer;errorId;
         
 
-    constructor(private putPrestacioService: PutPrestacioService) { }
+    constructor(private putServeiSocialService: PutServeiSocialService) { }
                             
-        putPrestacio(){    /*          this.putCursService.putCurs(this.putid,this.putnom,this.putidcentre,this.putnomcentre)
+        putServeiSocial(){    /*          this.putCursService.putCurs(this.putid,this.putnom,this.putidcentre,this.putnomcentre)
                   .catch((error: any) => {               
                if (error.status === 0 || error.status === "0") {                   
                     this.errorServer=true;
