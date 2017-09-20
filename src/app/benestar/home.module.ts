@@ -14,6 +14,7 @@ import { OficinesComponent } from './Oficines/oficines.component';
 
 import {OrganitzacionsModule} from './organitzacions/organitzacions.module';
 import { ServeisModule } from './serveis/serveis.module';
+import { PersonesModule } from './persones/persones.module';
 //import {ProvaComponent} from './organitzacions/prova/prova.component';
 
 
@@ -24,11 +25,12 @@ import { ServeisModule } from './serveis/serveis.module';
     BrowserModule,
     FormsModule,
     OrganitzacionsModule,
-    ServeisModule
+    ServeisModule,
+    PersonesModule
   ],
   declarations: [
       HomeComponent,
-      OficinesComponent]
+      ]
 
 })
 
