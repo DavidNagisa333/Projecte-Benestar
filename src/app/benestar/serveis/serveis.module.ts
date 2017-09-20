@@ -13,11 +13,6 @@ import { ServeisComponent } from './serveis.component';
   imports: [
     CommonModule,
     ServeisRoutingModule,
-    BrowserModule,
-    FormsModule,s
-    //PrestacioRoutingModule,
-    //HomeRoutingModule,
-    //AppRoutingModule,
       
   ],
   declarations: [PrestacioComponent, ServeisComponent]
