@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { OficinesRoutingModule } from './oficines-routing.module';
 import { OficinesComponent } from './oficines.component';
 
-import {OficinesComponent} from './oficines.component';
-
 @NgModule({
   imports: [
     CommonModule,
