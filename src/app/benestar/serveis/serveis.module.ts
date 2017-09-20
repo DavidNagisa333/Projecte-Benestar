@@ -20,10 +20,13 @@ import { ServeiSocialModule } from './serveisSocials/serveiSocial.module';
     CopagamentModule,
     ServeiSocialModule,
     FormsModule
+<<<<<<< HEAD
+=======
+
+>>>>>>> 363d459a32b04c4553fd695ae928ff3848e5e2c8
   ],
   declarations: [ServeisComponent,
                // PrestacioComponent
                 ]
 })
-
 export class ServeisModule { }

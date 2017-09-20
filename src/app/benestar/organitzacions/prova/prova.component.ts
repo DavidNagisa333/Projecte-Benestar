@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProvaComponent implements OnInit {
     ngOnInit() {
+        
+        console.log(localStorage);
     }
+    
     
 }

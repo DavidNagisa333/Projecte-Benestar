@@ -13,7 +13,7 @@ export class OrganitzacionsComponent implements OnInit {
 
     ngOnInit() {
     }
-    
+    /*
     //Funció que afageix una organització
     /*
     addOrganitzacio(){        this.organitzacionsService.addOrganitzacio(this.id,this.nom,this.telefon)

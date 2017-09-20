@@ -18,7 +18,7 @@ import {FormsModule} from '@angular/forms';
   imports: [
     CommonModule,
     PrestacioRoutingModule,
-       FormsModule
+    FormsModule
   ],
   declarations: [AddPrestacioComponent,
                  PutPrestacioComponent,
