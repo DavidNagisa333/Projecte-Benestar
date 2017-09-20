@@ -20,12 +20,13 @@ import {ProvaComponent} from './organitzacions/prova/prova.component';
     HomeRoutingModule,
     BrowserModule,
     FormsModule,
-    OrganitzacionsModule
+    OrganitzacionsModule,
+    OficinesComponent
   ],
   declarations: [
       ServeisComponent,
       HomeComponent,
-      OficinesComponent]
+      ]
 
 })
 
