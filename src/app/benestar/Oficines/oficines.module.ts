@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { JaumeCRoutingModule } from './jaume-c-routing.module';
+import { OficinesRoutingModule } from './oficines-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    JaumeCRoutingModule
+    OficinesRoutingModule
   ],
   declarations: []
 })
-export class JaumeCModule { }
+export class OficinesModule { }
