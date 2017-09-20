@@ -20,12 +20,16 @@ import {BrowserModule} from '@angular/platform-browser';
     PrestacioModule,
     CopagamentModule,
     ServeiSocialModule,
+<<<<<<< HEAD
     FormsModule,
     BrowserModule
+=======
+    FormsModule
+
+>>>>>>> de6f48ebeaa01215b4d160054e191024e6a890cb
   ],
   declarations: [ServeisComponent,
                // PrestacioComponent
                 ]
 })
-
 export class ServeisModule { }
