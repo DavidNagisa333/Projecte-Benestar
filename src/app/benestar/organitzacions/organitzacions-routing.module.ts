@@ -7,7 +7,7 @@ const routes: Routes = [
     {
     path: 'prova',
     component: ProvaComponent,
-    children: []
+    
     }]
 
 @NgModule({
