@@ -15,27 +15,12 @@ import { HomeComponent } from './home.component';
     HomeRoutingModule,
       
     OrganitzacionsModule,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    OficinesComponent
-  ],
-  declarations: [
-      ServeisComponent,
-      HomeComponent,
-      ]
-
-=======
-    ServeisModule
-=======
     ServeisModule,
     PersonesModule,
-    OficinesModule
->>>>>>> db7a0a52bb22dd52348b2592afce83c8c99dc07d
-  ],
+    OficinesModule],
   declarations: [
       HomeComponent
   ]
->>>>>>> 7db833c8e2e39a2230a9a783da0524b64016ffb4
 })
 
 export class HomeModule { }
