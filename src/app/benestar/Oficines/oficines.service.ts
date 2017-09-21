@@ -26,7 +26,7 @@ export class OficinesService {
 	}
 
 	// L L I S T A R   T O T E S  L E S   P E R S O N E S
-	llistarPersones(id) {
+	llistarOficina(id) {
 
 		const url = "http://172.17.0.242:8080/benestar/allPersones?id=" + id;
 
