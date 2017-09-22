@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { LoginService } from './login/login.service';
+import { AuthHttp, AuthConfig } from 'angular-jwt';
 
 @Component({
   selector: 'app-root',

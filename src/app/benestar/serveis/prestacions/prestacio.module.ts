@@ -10,20 +10,22 @@ import { AddPrestacioComponent } from './addPrestacio/addPrestacio.component';
 import { DelPrestacioComponent } from './delPrestacio/delPrestacio.component';
 import { PutPrestacioComponent } from './putPrestacio/putPrestacio.component';
 import { AllPrestacioComponent } from './allPrestacio/allPrestacio.component';
-import { PrestacioComponent } from './prestacio.component';
-
+import { Ordre, PrestacioComponent } from './prestacio.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     PrestacioRoutingModule,
+    NgxPaginationModule,
     FormsModule
   ],
   declarations: [AddPrestacioComponent,
                  PutPrestacioComponent,
                  DelPrestacioComponent,
                  AllPrestacioComponent,
-                 PrestacioComponent]
+                 PrestacioComponent,
+                 Ordre]
 })
 export class PrestacioModule { }
