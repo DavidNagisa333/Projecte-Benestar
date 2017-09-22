@@ -42,7 +42,6 @@ export class Ordre implements PipeTransform{
 @Component({
   selector: 'app-persones',
   templateUrl: './persones.component.html',
-  styleUrls: ['./persones.component.css'],
   providers: [ PersonesService, Ordre ]
 })
 export class PersonesComponent implements OnInit {
