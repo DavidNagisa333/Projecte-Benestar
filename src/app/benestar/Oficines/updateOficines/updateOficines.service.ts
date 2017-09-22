@@ -25,7 +25,7 @@ updateOficina(oficina){
         return this.http
         		   .put(this.updUrl + body, body, {headers:headers});
 }
-
+}
 /*
 
 llistarOficina(id) {

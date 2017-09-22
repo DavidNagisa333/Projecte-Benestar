@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {OficinesService} from '../oficines.service';
-import {ListOficinesService} from './listOficines.service';
+import {UpdateOficinesService} from './updateOficines.service';
 
 
 
@@ -8,7 +8,7 @@ import {ListOficinesService} from './listOficines.service';
   selector: 'listOficines',
   templateUrl:'./listOficines.component.html',
   //styleUrls: ['../../.css'],
-  providers: [ListOficinesService]
+  providers: [UpdateOficinesService]
 })
 
     export class ListOficinesComponent{
@@ -16,7 +16,7 @@ import {ListOficinesService} from './listOficines.service';
         id;codiPostal;provincia;poblacio;direccio;
         
         
- constructor(private listOficinesService: ListOficinesService) { } 
+ constructor(private listOficinesService: UpdateOficinesService) { } 
         
      listoficines(){}
 }
