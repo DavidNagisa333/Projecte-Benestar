@@ -12,7 +12,6 @@ import {OficinesModule} from './Oficines/oficines.module';
 import { HomeComponent } from './home.component';
 
 @NgModule({
-<<<<<<< HEAD
   imports: [
     HomeRoutingModule,
 
@@ -24,18 +23,6 @@ import { HomeComponent } from './home.component';
   declarations: [
       HomeComponent,
   ],
-=======
- imports: [
-   HomeRoutingModule,    
-   OrganitzacionsModule,
-   ServeisModule,
-   PersonesModule,
-   OficinesModule
- ],
- declarations: [
-     HomeComponent,
- ],
->>>>>>> 2d291f63c22b1b2401f4113765914fe834699830
 })
 
 export class HomeModule { }
