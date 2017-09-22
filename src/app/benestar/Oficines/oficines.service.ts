@@ -11,7 +11,7 @@ export class OficinesService {
   constructor(private http: Http) { }
 
 	// A F E G I R   U N A   P E R S O N A
-	afegirOficina(oficina) {
+	/*afegirOficina(oficina) {
 		let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
       	let options = new RequestOptions({ headers: headers });
 
@@ -26,7 +26,7 @@ export class OficinesService {
 	}
 
 	// L L I S T A R   T O T E S  L E S   P E R S O N E S
-	llistarPersones(id) {
+	llistarOficina(id) {
 
 		const url = "http://172.17.0.242:8080/benestar/allPersones?id=" + id;
 
@@ -58,5 +58,5 @@ export class OficinesService {
     	return this.http
         		   .delete(url);
         		   //.map(res => res.json());
-    }
+    }*/
 }
