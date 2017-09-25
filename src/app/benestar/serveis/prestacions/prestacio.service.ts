@@ -5,13 +5,13 @@ import 'rxjs/add/operator/map';
 //import {Model} from './model';
 import { Observable } from 'rxjs/Observable';
 import { sprintf } from "sprintf-js";
-
+import { LoginService } from '../../../login/login.service';
 
 @Injectable()
 
 
 export class PrestacioService {
-    constructor(private http: Http) { }
+    constructor(private http: Http, private loginService: LoginService) { }
 
 private addUrl = 'http://172.17.0.161:8080/serveis/addPrestacio?';
 private allUrl = 'http://172.17.0.161:8080/serveis/allPrestacio?ipp=';
@@ -35,10 +35,16 @@ addPrestacio(prestacio){
 
 //ALL
 allPrestacio(ipp) {
-  var a = this.http.get(this.allUrl+ipp)
-            .map(res => res.json())
-  return a;
+ const url = "http://172.17.0.161:8080/serveis/allPrestacio?ipp=" + ipp;
+    let headers = new Headers({
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + this.loginService.getToken()
+    });
+        return this.http
+                   .get(url, {headers:headers})
+                   .map(res => res.json());
   }
+
 
 //DEL
 delPrestacio(prestacio){     

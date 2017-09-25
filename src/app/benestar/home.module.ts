@@ -23,8 +23,7 @@ import { HomeComponent } from './home.component';
   ],
   declarations: [
       HomeComponent,
-  ],
-
+  ]
 })
 
 export class HomeModule { }

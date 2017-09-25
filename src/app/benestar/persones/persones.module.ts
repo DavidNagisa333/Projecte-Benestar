@@ -5,7 +5,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 //import { PersonesRoutingModule } from './persones-routing.module';
 import { Ordre, PersonesComponent } from './persones.component';
-import { NgxPaginationModule } from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination'
 
 @NgModule({
   imports: [
