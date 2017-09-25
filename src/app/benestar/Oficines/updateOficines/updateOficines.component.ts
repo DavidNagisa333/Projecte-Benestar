@@ -1,22 +1,22 @@
 import {Component, OnInit} from '@angular/core';
 import {OficinesService} from '../oficines.service';
-import {ListOficinesService} from './listOficines.service';
+import {UpdateOficinesService} from './updateOficines.service';
 
 
 
 @Component({
-  selector: 'listOficines',
-  templateUrl:'./listOficines.component.html',
+  selector: 'updateOficines',
+  templateUrl:'./updateOficines.component.html',
   //styleUrls: ['../../.css'],
-  providers: [ListOficinesService]
+  providers: [UpdateOficinesService]
 })
 
-    export class ListOficinesComponent{
+    export class UpdateOficinesComponent{
         
         id;codiPostal;provincia;poblacio;direccio;
         
         
- constructor(private listOficinesService: ListOficinesService) { } 
+ constructor(private updateOficinesService: UpdateOficinesService) { } 
         
-     listoficines(){}
+     updateoficines(){}
 }
