@@ -1,5 +1,5 @@
 import {Injectable}  from '@angular/core';
-import {Http,Headers,Response}  from '@angular/http';
+import {Http,Headers,Response, RequestOptions}  from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 
 
@@ -13,15 +13,20 @@ private addUrl = 'http://172.17.0.242:8080/benestar/addOficina';
 
 constructor(private http: Http){}
 
-addOficina(oficina){   let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
-      	let options = new RequestOptions({ headers: headers });
+addOficina(oficina){   var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+      	
 
 
       	const body = "id=" + oficina.id + "&codiPostal" + oficina.codiPostal + "&poblacio=" + oficina.poblacio + "&Ppovincia=" + oficina.provincia + "&direccio=" + oficina.direccio;
 
       	return this.http
       			   //.post(url, JSON.stringify(oficina), options)
-      			   .post(addUrl, body, options);
+<<<<<<< HEAD
+      			   .post(this.addUrl, body, headers);
+=======
+      			   .post(this.addUrl, body, options);
+>>>>>>> bc5e0972375ea6d01fd0b096ee4e6cae0c5fdd5b
                    //.map(res => res.json());
 	}
 }

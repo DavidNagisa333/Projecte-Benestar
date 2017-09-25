@@ -21,6 +21,7 @@ listOficina(oficina){
                    .get(url)
                    .map(res => res.json());
 }
+}
 
 /*
 
@@ -33,3 +34,4 @@ llistarOficina(id) {
                    .map(res => res.json());
     }
 */
+}

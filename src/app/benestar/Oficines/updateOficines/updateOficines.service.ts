@@ -16,16 +16,15 @@ constructor(private http: Http){}
 
 updateOficina(oficina){ 
 
-		const headers = new Headers();
-        //headers.append('Access-Control-Allow-Origin', '*');
-        headers.append('Content-Type', 'application/json');
+		var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
         const body = "id=" + oficina.id + "&codiPostal" + oficina.codiPostal + "&poblacio=" + oficina.poblacio + "&Ppovincia=" + oficina.provincia + "&direccio=" + oficina.direccio;
 
         return this.http
         		   .put(this.updUrl + body, body, {headers:headers});
 }
-
+}
 /*
 
 llistarOficina(id) {
@@ -37,3 +36,4 @@ llistarOficina(id) {
                    .map(res => res.json());
     }
 */
+}
