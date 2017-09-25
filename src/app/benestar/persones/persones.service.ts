@@ -8,7 +8,7 @@ import { LoginService } from '../../login/login.service';
 @Injectable()
 export class PersonesService {
 
-<<<<<<< HEAD
+
 	constructor(private http: Http) { }
 /*
 =======
