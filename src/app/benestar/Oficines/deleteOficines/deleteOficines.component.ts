@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {OficinesService} from '../oficines.service';
-import {DeleteOficinesService} from './deleteOficines.service';
+import {DeleteOficinesService} from './deleteOficines.service'
 
 
 
