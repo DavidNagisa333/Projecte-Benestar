@@ -16,7 +16,11 @@ import {UpdateOficinesService} from './updateOficines.service';
         id;codiPostal;provincia;poblacio;direccio;
         
         
+<<<<<<< HEAD
  constructor(private updateOficinesService: UpdateOficinesService) { } 
+=======
+ constructor(private listOficinesService: UpdateOficinesService) { } 
+>>>>>>> bc5e0972375ea6d01fd0b096ee4e6cae0c5fdd5b
         
      updateoficines(){}
 }

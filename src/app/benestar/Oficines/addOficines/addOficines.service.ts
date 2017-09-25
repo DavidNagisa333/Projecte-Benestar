@@ -1,5 +1,5 @@
 import {Injectable}  from '@angular/core';
-import {Http,Headers,Response}  from '@angular/http';
+import {Http,Headers,Response, RequestOptions}  from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 
 
@@ -22,7 +22,11 @@ addOficina(oficina){   var headers = new Headers();
 
       	return this.http
       			   //.post(url, JSON.stringify(oficina), options)
+<<<<<<< HEAD
       			   .post(this.addUrl, body, headers);
+=======
+      			   .post(this.addUrl, body, options);
+>>>>>>> bc5e0972375ea6d01fd0b096ee4e6cae0c5fdd5b
                    //.map(res => res.json());
 	}
 }

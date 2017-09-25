@@ -21,6 +21,7 @@ listOficina(oficina){
                    .get(url)
                    .map(res => res.json());
 }
+}
 
 /*
 
