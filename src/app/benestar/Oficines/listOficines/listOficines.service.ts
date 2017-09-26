@@ -20,18 +20,5 @@ listOficina(oficina){
         return this.http
                    .get(url)
                    .map(res => res.json());
-}
-}
-
-/*
-
-llistarOficina(id) {
-
-		const url = "http://172.17.0.242:8080/benestar/allPersones?id=" + id;
-
-        return this.http
-                   .get(url)
-                   .map(res => res.json());
     }
-*/
 }

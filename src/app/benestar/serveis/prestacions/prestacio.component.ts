@@ -81,7 +81,7 @@ refreshData() {
             .addPrestacio(prestacio)
           .subscribe(data=> this.refreshData());
 
-      this.addMode = false; 
+      this.addMode = false;
   	}
 
     putPrestacio(prestacio) {

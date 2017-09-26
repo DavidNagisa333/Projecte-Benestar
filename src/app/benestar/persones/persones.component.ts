@@ -58,10 +58,10 @@ export class PersonesComponent implements OnInit {
     constructor(private personaService: PersonesService, private ordre: Ordre) { }
 
 	  ngOnInit() {
-		  //this.refreshData();
+		  this.refreshData();
 	  }
 
-  	/*refreshData() {
+  	refreshData() {
       console.log("RD");
   		this.personaService
           .llistarPersones(this.itemsPerPage)
@@ -125,5 +125,5 @@ export class PersonesComponent implements OnInit {
     // la funció es dispara al clicar en una icona, i enviem la variable flag per demostrar-ho
     sort_by(nouOrdre) {
       this.ordre.transform(this.pagedItems, nouOrdre, this.flag);
-    }*/
+    }
 }

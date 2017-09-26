@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Http,Headers,Response,RequestOptions}  from '@angular/http';
-<<<<<<< HEAD
-=======
-//import {AuthHttp} from 'angular2-jwt';
->>>>>>> 7c7702756a631436a86142576dd1ccedd98c03b6
+
 import {Observable} from 'rxjs/Observable';
 import {LoginService} from '../../login/login.service';
 import 'rxjs/add/operator/map'
