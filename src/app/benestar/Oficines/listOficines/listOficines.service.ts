@@ -20,6 +20,7 @@ listOficina(oficina){
         return this.http
                    .get(url)
                    .map(res => res.json());
+<<<<<<< HEAD
 
 }
 
@@ -32,6 +33,7 @@ llistarOficina(id) {
         return this.http
                    .get(url)
                    .map(res => res.json());
+=======
+>>>>>>> 24e20f9daad038557b63940aed2e9839a96bab27
     }
-*/
 }

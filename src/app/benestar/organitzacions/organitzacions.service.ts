@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Http,Headers,Response,RequestOptions}  from '@angular/http';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 24e20f9daad038557b63940aed2e9839a96bab27
 import {Observable} from 'rxjs/Observable';
 import {LoginService} from '../../login/login.service';
 import 'rxjs/add/operator/map'

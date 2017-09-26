@@ -9,8 +9,11 @@ import { LoginService } from '../../login/login.service';
 export class PersonesService {
 
 	constructor(private http: Http, private loginService: LoginService) { }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 24e20f9daad038557b63940aed2e9839a96bab27
 	// A F E G I R   U N A   P E R S O N A
 	afegirPersona(persona) {
 		//let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });

@@ -23,6 +23,7 @@ updateOficina(oficina){
 
         return this.http
         		   .put(this.updUrl + body, body, {headers:headers});
+<<<<<<< HEAD
 }
 
 /*
@@ -34,6 +35,7 @@ llistarOficina(id) {
         return this.http
                    .get(url)
                    .map(res => res.json());
+=======
+>>>>>>> 24e20f9daad038557b63940aed2e9839a96bab27
     }
-*/
 }
