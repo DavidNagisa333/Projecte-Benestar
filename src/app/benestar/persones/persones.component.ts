@@ -61,12 +61,7 @@ export class PersonesComponent implements OnInit {
 		  this.refreshData();
 	  }
 
-<<<<<<< HEAD
    refreshData() {
-=======
-  	refreshData() {
->>>>>>> 24e20f9daad038557b63940aed2e9839a96bab27
-      console.log("RD");
   		this.personaService
           .llistarPersones(this.itemsPerPage)
           .subscribe(
