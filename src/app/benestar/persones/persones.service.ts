@@ -8,13 +8,9 @@ import { LoginService } from '../../login/login.service';
 @Injectable()
 export class PersonesService {
 
-
-	constructor(private http: Http) { }
-/*
-=======
 	constructor(private http: Http, private loginService: LoginService) { }
 
->>>>>>> 7c7702756a631436a86142576dd1ccedd98c03b6
+
 	// A F E G I R   U N A   P E R S O N A
 	afegirPersona(persona) {
 		//let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });

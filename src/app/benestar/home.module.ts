@@ -13,10 +13,6 @@ import {OficinesModule} from './Oficines/oficines.module';
 import { HomeComponent } from './home.component';
 
 @NgModule({
-<<<<<<< HEAD
-
-=======
->>>>>>> 676ecb2e399771eee801da8dce9d20627842da45
   imports: [
     HomeRoutingModule,
     OrganitzacionsModule,
@@ -26,11 +22,7 @@ import { HomeComponent } from './home.component';
   ],
   declarations: [
       HomeComponent,
-<<<<<<< HEAD
-  ]
-=======
-  ],
->>>>>>> 676ecb2e399771eee801da8dce9d20627842da45
+     ]
 })
 
 export class HomeModule { }

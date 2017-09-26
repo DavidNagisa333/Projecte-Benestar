@@ -20,7 +20,7 @@ listOficina(oficina){
         return this.http
                    .get(url)
                    .map(res => res.json());
-}
+
 }
 
 /*
