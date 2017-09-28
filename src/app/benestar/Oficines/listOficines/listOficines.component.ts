@@ -17,11 +17,6 @@ import {ListOficinesService} from './listOficines.service';
         
         
  constructor(private listOficinesService: ListOficinesService) { } 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 24e20f9daad038557b63940aed2e9839a96bab27
         
-     listoficines(){}
+     //listoficines(){}
 }
