@@ -1,3 +1,148 @@
-<p>
-  jaume-c works!
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Oficines</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!--<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css" rel="stylesheet">-->
+</head>
+<body>
+	<div class="container">
+
+		<form class="form-search">
+        	<div class="row-fluid">
+        		<p>a</p>
+                <!--
+
+                <div class="input-append pull-left">
+                    <input type="search" id="cerca" name="cerca" [(ngModel)]="query" class="search-query" placeholder="Cerca" tabindex="1">
+                    <button (click)="refreshData()" type="submit" class="btn" style="height:30px"><i class="icon-search icon-large"></i></button>              
+                </div>-->
+
+               
+
+	        	<!--<div class="pull-right">
+	        		<label for="pagines">Resultats per pàgina</label>
+                    <select id="pagines" name="pagines" [(ngModel)]="itemsPerPage" (ngModelChange)="refreshData()">
+                    	<option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                    </select>
+	        	</div>
+	        </div>
+        </form>
+		
+		<table class="table table-striped table-condensed table-hover"> -->
+
+			<!-- C A P Ç A L E R A -->
+
+			<!--<thead>
+		        <tr>
+		        	<th style="width: 100px;">
+                        <div class="btn-toolbar"><i class="btn icon-plus" (click)="toogleAddMode()"></i></div>
+                    </th>
+		            <th class="id">Id&nbsp;<a (click)="sort_by('id')"><i class="icon-sort"></i></a></th>
+		            <th class="provincia">Provincia&nbsp;<a (click)="sort_by('provincia')"><i class="icon-sort"></i></a></th>
+		            <th class="poblacio">Poblacio&nbsp;<a (click)="sort_by('poblacio')"><i class="icon-sort"></i></a></th>
+		        </tr>
+		    </thead>
+
+			<tbody>-->
+
+			
+		    	<!--<tr *ngIf="addMode">
+
+		    		<td>
+		    			<div class="btn-toolbar">
+		    				<div class="btn-group">
+		    					<i class="btn icon-save" (click)="addPrestacio(item)"></i>
+                                <i class="btn icon-remove" (click)="toogleAddMode()"></i>
+		    				</div>
+		    			</div>
+		    		</td>
+
+		    		<td><input [(ngModel)]="item.id" disabled="true"/></td>
+                    <td><input [(ngModel)]="item.tipus" /></td>
+                    <td><input [(ngModel)]="item.descripcio" /></td>
+		    	</tr>-->
+
+				<!-- L L I S T A T   D E   T O T S   E L S   E Q U I P A M E N T S -->
+
+				<!--<tr *ngFor="let item of pagedItems | paginate: {itemsPerPage: itemsPerPage, currentPage: currentPage} | ordre">
+				<!--<tr *ngFor="let item of pagedItems">-->
+
+					<!-- S W I T C H   E N T R E -->
+                    
+                    <!-- E D I T A R   E Q U I P A M E N T S -->
+                    <!-- E L I M I N A R   E Q U I P A M E N T S  -->
+                    
+                    <!-- I -->
+
+                    <!-- C O N F I R M A R   L A   M O D I F I C A C I Ó -->
+                    <!-- C A N C E L A R   L A   M O D I F I C A C I Ó-->
+                    
+                   <!-- <td>
+                        <div class="btn-toolbar" *ngIf="item.editMode == false || item.editMode == null">
+                            <div class="btn-group">
+                                <i class="btn icon-edit" (click)="editMode(item)"></i>
+                                <i class="btn icon-trash" (click)="delOficina(item)"></i>
+                            </div>
+                        </div>
+
+                        <div class="btn-toolbar" *ngIf="item.editMode == true">
+                            <div class="btn-group">
+                                <i class="btn icon-save" (click)="updateOficina(item)"></i>
+                                <i class="btn icon-remove" (click)="editMode(item)"></i>
+                            </div>
+                        </div>
+                    </td>-->
+					
+					<!-- I N F O   D E L S   E Q U I P A M E N T S -->
+
+	                <!--<td>
+	                    {{item.id}}
+	                </td>
+
+		    		<td>
+	                    <span *ngIf="item.editMode == false || item.editMode == null">
+	                        {{item.tipus}}
+	                    </span>
+
+	                    <input [(ngModel)]="item.tipus" *ngIf="item.editMode == true" />
+	                </td>
+
+	                <td>
+	                    <span *ngIf="item.editMode == false || item.editMode == null">
+	                        {{item.descripcio}}
+	                    </span>
+
+	                    <input [(ngModel)]="item.descripcio" *ngIf="item.editMode == true" />
+	                </td>
+		    	</tr>
+			</tbody>
+
+			<tfoot>
+                <td colspan="9">
+                    <pagination-controls
+                        (pageChange)="canvi($event)"
+                        maxSize = 6
+                        autoHide = true
+                        directionLinks = true
+                        previousLabel = "Anterior"
+                        nextLabel = "Següent">
+                    </pagination-controls>
+                </td>
+                
+                <td>
+                    <input [(ngModel)]="currentPage" (change)="setPage2()" (click)="setPage2()" class="search-query span1"> / {{numPages}}
+                </td>
+            </tfoot>
+
+		</table>
+-->
+	</div>
+</body>
+</html>
