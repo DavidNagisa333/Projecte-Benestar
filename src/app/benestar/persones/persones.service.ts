@@ -37,7 +37,8 @@ export class PersonesService {
 
     const headers = new Headers({
       'Content-type': 'application/json',
-      'Authorization': 'Bearer ' + this.loginService.getToken()
+      'Authorization': 'Bearer ' + this.loginService.getToken(),
+      'key': 'AIzaSyDIrNAeQP9lk_X-ngo7kMCSGmTFsAEGuOE'
     });
 
         return this.http

@@ -25,8 +25,8 @@ logged=false;
    }
 
    ngOnInit(){
-       if (this.loginService.getToken()=="")
-           {
+       if (this.loginService.getToken()=="" || this.loginService.getToken() === undefined)
+           {    
                this.logged=false;
                this.router.navigate(['/home']); 
            }
