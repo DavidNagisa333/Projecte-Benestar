@@ -8,84 +8,68 @@ import { LoginService } from '../../login/login.service';
 @Injectable()
 export class PersonesService {
 
+  url = "http://localhost:8080/persona";
+
+  headersU = new Headers({
+    'Content-type': 'application/x-www-form-urlencoded',
+    'Authorization': 'Bearer ' + this.loginService.getToken()
+  });
+
+  headersCRD = new Headers({
+    'Content-type': 'application/json',
+    'Authorization': 'Bearer ' + this.loginService.getToken()
+  });
+
 	constructor(private http: Http, private loginService: LoginService) { }
+
 
 	// A F E G I R   U N A   P E R S O N A
 	afegirPersona(persona) {
-		//let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
-  	//let options = new RequestOptions({ headers: headers });
 
-    const headers = new Headers({
-      'Content-type': 'application/x-www-form-urlencoded',
-      'Authorization': 'Bearer ' + this.loginService.getToken()
-    });
-
-  	const url = "http://172.17.0.191:8080/benestar/afegirPersona?";
+    const url = this.url + "/afegirPersona?";
 
   	const body = "nom=" + persona.nom + "&cognoms=" + persona.cognoms + "&correu=" + persona.correu + "&telefon=" + persona.telefon + "&mobil=" + persona.mobil +
   				 "&adreca=" + persona.adreca + "&localitat=" + persona.localitat + "&comarca=" + persona.comarca;
 
   	return this.http
-  			   //.post(url, JSON.stringify(persona), options)
-  			   .post(url, body, {headers:headers});
+  			   .post(url, body, {headers:this.headersU});
                //.map(res => res.json());
 	}
 
+
 	// L L I S T A R   T O T E S  L E S   P E R S O N E S
-	llistarPersones(ipp) {
+	llistarPersones(ipp, query) {
 
-    const url = "http://172.17.0.191:8080/benestar/llistarPersones?ipp=" + ipp;
+    query = query ? "&filter=" + query : "&filter=" + "";
+    const url = this.url + "/llistarPersones?ipp=" + ipp + query;;
 
-    const headers = new Headers({
-      'Content-type': 'application/json',
-      'Authorization': 'Bearer ' + this.loginService.getToken()
-    });
-
-        return this.http
-                   .get(url, {headers:headers})
-                   .map(res => res.json());
+    return this.http
+               .get(url, {headers:this.headersCRD})
+               .map(res => res.json());
     }
+
 
 	// M O D I F I C A R   U N A   P E R S O N A
 	modPersona(persona) {
 
-    const url = "http://172.17.0.191:8080/benestar/modPersona?";
-
-    const headers = new Headers({
-      'Content-type': 'application/json',
-      'Authorization': 'Bearer ' + this.loginService.getToken()
-    });
+    const url = this.url + "/modPersona?";
 
     const body = "id=" + persona.id + "&nom=" + persona.nom + "&cognoms=" + persona.cognoms + "&correu=" + persona.correu + "&telefon=" + persona.telefon + "&mobil=" + persona.mobil +
   				 "&adreca=" + persona.adreca + "&localitat=" + persona.localitat + "&comarca=" + persona.comarca;
 
     return this.http
-    		   .put(url + body, body, {headers:headers});
+    		   .put(url + body, body, {headers:this.headersCRD});
     		   //.map(res => res.json())
 	}
+
 
 	// E S B O R R A R   U N A   P E R S O N A
     esborrarPersona(persona) {
 
-    	const url = "http://172.17.0.191:8080/benestar/esborrarPersona?id=" + persona.id;
-
-      const headers = new Headers({
-        'Content-type': 'application/json',
-        'Authorization': 'Bearer ' + this.loginService.getToken()
-      });
+      const url = this.url + "/esborrarPersona?id=" + persona.id;
 
     	return this.http
-        		   .delete(url, {headers:headers});
+        		   .delete(url, {headers:this.headersCRD});
         		   //.map(res => res.json());
     }
-
-    // L L I S T A R   "X"   P E R S O N E S,   S E G O N S   A T R I B U T
-	/*llistarXpersones(atribut, valor) {
-
-		const url = "http://172.17.0.191:8080/benestar/llistarXpersones?atribut=" + atribut + "&valor=" + valor;
-
-		return this.http
-				   .get(url)
-				   .map(res => res.json());
-	}*/
 }
