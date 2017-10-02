@@ -14,8 +14,7 @@ import {DeleteOficinesService} from './deleteOficines.service'
     export class DeleteOficinesComponent{
         
         id;
-        
-        
+             
  constructor(private deleteOficinesService: DeleteOficinesService) { } 
         
      deleteoficines(oficina){

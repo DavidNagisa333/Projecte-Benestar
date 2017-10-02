@@ -5,18 +5,18 @@ import {ListOficinesService} from './listOficines.service';
 
 
 @Component({
-  selector: 'updateOficines',
-  templateUrl:'./updateOficines.component.html',
+  selector: 'listOficines',
+  templateUrl:'./listOficines.component.html',
   //styleUrls: ['../../.css'],
   providers: [ListOficinesService]
 })
 
-    export class UpdateOficinesComponent{
+    export class ListOficinesComponent{
         
         id;codiPostal;provincia;poblacio;direccio;
         
         
- constructor(private updateOficinesService: ListOficinesService) { } 
+ constructor(private listOficinesService: ListOficinesService) { } 
         
-     updateoficines(){}
+     //listoficines(){}
 }

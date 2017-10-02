@@ -3,7 +3,6 @@
 	</head>
 
 	<body>
-		<p><a routerLink="/prova">prova</a></p>
 		<div class="container">
 
 		<form class="form-search">
@@ -62,12 +61,11 @@
 		    		<td>
 		    			<div class="btn-toolbar">
 		    				<div class="btn-group">
-		    					<i class="btn icon-save" (click)="afegirPersona(item)"></i>
+		    					<i class="btn icon-save" (click)="addOrganitzacio(item)"></i>
                                 <i class="btn icon-remove" (click)="toogleAddMode()"></i>
 		    				</div>
 		    			</div>
 		    		</td>
-
 		    		<td><input [(ngModel)]="item.id" disabled="true"/></td>
                     <td><input [(ngModel)]="item.nom" /></td>
                     <td><input [(ngModel)]="item.telefon" /></td>
@@ -97,19 +95,19 @@
                         <div class="btn-toolbar" *ngIf="item.editMode == false || item.editMode == null">
                             <div class="btn-group">
                                 <i class="btn icon-edit" (click)="editMode(item)"></i>
-                                <i class="btn icon-trash" (click)="esborrarPersona(item)"></i>
+                                <i class="btn icon-trash" (click)="delOrganitzacio(item)"></i>
                             </div>
                         </div>
 
                         <div class="btn-toolbar" *ngIf="item.editMode == true">
                             <div class="btn-group">
-                                <i class="btn icon-save" (click)="modPersona(item)"></i>
+                                <i class="btn icon-save" (click)="updateOrganitzacio(item)"></i>
                                 <i class="btn icon-remove" (click)="editMode(item)"></i>
                             </div>
                         </div>
                     </td>
 					
-					<!-- I N F O   D E L S   E Q U I P A M E N T S -->
+					<!-- L L I S T A   D E   O R G A N I T Z A C I O N S -->
 
 	                <td>
 	                    {{item.id}}
@@ -186,7 +184,7 @@
                 </td>
                 
                 <td>
-                    <input [(ngModel)]="currentPage" (change)="setPage2()" (click)="setPage2()" class="search-query span1"> / {{numPages}}
+                    <input [(ngModel)]="currentPage" (change)="setPage2()" class="search-query span1"> / {{numPages}}
                 </td>
             </tfoot>
 

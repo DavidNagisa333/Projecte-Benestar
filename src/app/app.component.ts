@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { LoginService } from './login/login.service';
+import { AuthHttp, AuthConfig } from 'angular-jwt';
 
 @Component({
   selector: 'app-root',
@@ -24,8 +25,8 @@ logged=false;
    }
 
    ngOnInit(){
-       if (this.loginService.getToken()=="")
-           {
+       if (this.loginService.getToken()=="" || this.loginService.getToken() === undefined)
+           {    
                this.logged=false;
                this.router.navigate(['/home']); 
            }

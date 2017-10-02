@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit{
         private router: Router,
         private loginService: LoginService) {}
 
-    ngOnInit() {
+    ngOnInit() {        
         this.loginService.logout(); 
     }
 
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit{
                 if (result === true) {
                     console.log("el resultat es true");
                     window.location.reload();                   
-                } else {
+                } else {                    
                     console.log("el resultat es false");
                     this.error = 'Username or password is incorrect';
                     this.loading = false;

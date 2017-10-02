@@ -46,9 +46,7 @@ export class Ordre implements PipeTransform{
 })
 export class OrganitzacionsComponent implements OnInit {
 
-
-    pagedItems = [];
-    item = {};
+    pagedItems = [];   
     itemsPerPage: number = 5;
     currentPage: number = 1;
     addMode: boolean = false;
@@ -75,27 +73,26 @@ export class OrganitzacionsComponent implements OnInit {
     }
 
     // A F E G I R   U N A   P E R S O N A
-    afegirPersona(persona) {
-    /*  this.organitzacionsService
-          .afegirPersona(persona)
+    addOrganitzacio(item) {
+      this.organitzacionsService
+          .addOrganitzacio(item)
           .subscribe(data=> this.refreshData());
-
-      this.addMode = false; */
+      this.addMode = false; 
     }
 
     // M O D I F I C A R   L E S   D A D E S   D ' U N A   P E R S O N A
-    modPersona(persona) {
+    updateOrganitzacio(item) {
       //delete persona["editMode"];
-    /*  this.organitzacionsService
-          .modPersona(persona)
-          .subscribe(data=> this.refreshData());*/
+      this.organitzacionsService
+          .updateOrganitzacio(item)
+          .subscribe(data=> this.refreshData());
     }
 
     // E S B O R R A R   U N A   P E R S O N A
-    esborrarPersona(persona) {
-    /*  this.organitzacionsService
-          .esborrarPersona(persona)
-          .subscribe(data=> this.refreshData());*/
+    delOrganitzacio(item) {
+      this.organitzacionsService
+          .delOrganitzacio(item.id)
+          .subscribe(data=> this.refreshData());
     }
 
     // switch del formulari modificar equipament

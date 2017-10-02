@@ -62,8 +62,7 @@ export class PersonesComponent implements OnInit {
 		  this.refreshData();
 	  }
 
-  	refreshData() {
-      console.log("RD");
+   refreshData() {
   		this.personaService
           .llistarPersones(this.itemsPerPage, this.query)
           .subscribe(

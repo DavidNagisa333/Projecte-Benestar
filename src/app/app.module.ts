@@ -1,16 +1,17 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {HttpModule} from '@angular/http';
 
-
-import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 
-import { HomeModule } from './benestar/home.module';
-
 import { AppComponent } from './app.component';
+import { HomeModule } from './benestar/home.module';
 import { LoginComponent } from './login/login.component';
+
+import { LoginService } from './login/login.service';
+
 
 
 
@@ -26,6 +27,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     LoginComponent
   ],
-  bootstrap:[AppComponent]
+  providers: [LoginService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
