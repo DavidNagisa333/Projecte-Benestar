@@ -21,11 +21,7 @@ export class PersonesService {
   });
 
 	constructor(private http: Http, private loginService: LoginService) { }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 40724dfda18d5607bceefb21af0d7011aac8ce27
 	// A F E G I R   U N A   P E R S O N A
 	afegirPersona(persona) {
 
@@ -43,15 +39,15 @@ export class PersonesService {
 	// L L I S T A R   T O T E S  L E S   P E R S O N E S
 	llistarPersones(ipp, query) {
 
-<<<<<<< HEAD
+
     query = query ? "&filter=" + query : "&filter=" + "";
     const url = this.url + "/llistarPersones?ipp=" + ipp + query;;
-=======
+
     const headers = new Headers({
       'Content-type': 'application/json',
       'Authorization': 'Bearer ' + this.loginService.getToken(),
     });
->>>>>>> 40724dfda18d5607bceefb21af0d7011aac8ce27
+
 
     return this.http
                .get(url, {headers:this.headersCRD})
