@@ -45,20 +45,18 @@ export class LoginService {
    getToken(): string {
         try{          
           var tokenExpired = this.JwtHelper.isTokenExpired(this.token.toString());
-          console.log(this.JwtHelper.decodeToken(this.token));
           //if token expired, deletes this token and logout
           if(tokenExpired){            
-              //alert("the connection has expired"); 
               //revmove token from localstorage             
               this.logout();
              //reloads pages, this knows that token are been deleted and do the logout
               return this.token ? this.token : "";          
-          }else if(!tokenExpired && this.token!=null){//if token are not expired, we need to return refreshed token               
+          }else if(!tokenExpired && this.token!=null){
+            //if token are not expired, we need to return refreshed token               
                return  this.refreshToken();
-             }else{               
-               throw new Error();
-             }             
-            //return this.token ? this.token : "";          
+           }else{               
+             throw new Error();
+           }                    
         }catch(e){ 
           return this.token ? this.token : "";
         }        
@@ -67,11 +65,11 @@ export class LoginService {
       try{
         this.username = JSON.parse(localStorage.getItem('currentUser'))["username"];
         this.password = JSON.parse(localStorage.getItem('currentUser'))["password"];
-      }catch(e){        
+      }catch(e){              
       }        
       try{        
         localStorage.removeItem('currentUser')['token'];
-        this.token=null; 
+        this.token=null;
         this.login(this.username,this.password);
         return this.token ? this.token : "";  
       }catch(e){             

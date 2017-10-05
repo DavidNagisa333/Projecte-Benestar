@@ -19,14 +19,14 @@ export class OrganitzacionsService {
       'Authorization': 'Bearer ' + this.token,
     }); 
 
-    addOrganitzacio(item){     
-        var Url = 'http://localhost:8080/organitzacio/addOrganitzacio?';
+    addOrganitzacio(item){   
+        var Url = 'http://localhost:8080/organitzacio/addOrganitzacio';
         return this.http
            .post(Url,JSON.stringify(item),{headers:this.headers})
            .map((response: Response ) => {});
     }
     updateOrganitzacio(item){  
-        var Url = 'http://localhost:8080/organitzacio/updateOrganitzacio?';
+        var Url = 'http://localhost:8080/organitzacio/updateOrganitzacio';
         return this.http
             .put(Url,JSON.stringify(item),{headers:this.headers})
             .map((response: Response ) => {});

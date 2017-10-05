@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit{
         private loginService: LoginService) {}
 
     ngOnInit() {        
-       //this.loginService.logout(); 
     }
 
 
