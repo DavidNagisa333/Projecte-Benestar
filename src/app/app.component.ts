@@ -12,28 +12,23 @@ import { AuthHttp, AuthConfig } from 'angular-jwt';
 export class AppComponent implements OnInit {
   title = 'app';
 
-logged=false;
+  logged=false;
 
    constructor(private loginService : LoginService,
               private router:Router){}
 
-
-   logout(){ 
-        window.location.reload();
+   logout(){         
         this.loginService.logout();  
         this.router.navigate(['/home']); 
    }
 
    ngOnInit(){
        if (this.loginService.getToken()=="" || this.loginService.getToken() === undefined)
-           {    
+           {
                this.logged=false;
                this.router.navigate(['/home']); 
            }
        else{
-           //var a = this.loginService.getToken();
-           //console.log(a);
-          // var a = this.currentUserData();
            this.logged=true;  
            this.router.navigate(['/home']);
        }

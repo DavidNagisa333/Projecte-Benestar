@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response} from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { JwtHelper, tokenNotExpired } from 'angular2-jwt';
-import { Router } from '@angular/router';
+import { JwtHelper} from 'angular2-jwt';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
@@ -14,8 +13,7 @@ export class LoginService {
    public token: string;
    public tokenExpired: boolean;
    public username:string;
-   public password:string;
-   
+   public password:string;   
 
    constructor(private http: Http) {
        var currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -47,15 +45,15 @@ export class LoginService {
    getToken(): string {
         try{          
           var tokenExpired = this.JwtHelper.isTokenExpired(this.token.toString());
+          console.log(this.JwtHelper.decodeToken(this.token));
           //if token expired, deletes this token and logout
-          if(tokenExpired){      
-              alert("the connection has expired"); 
+          if(tokenExpired){            
+              //alert("the connection has expired"); 
               //revmove token from localstorage             
-              localStorage.removeItem('currentUser'); 
-              //reloads pages, this knows that token are been deleted and do the logout
-              window.location.reload();             
-          }else if(!tokenExpired && this.token!=null){//if token are not expired, we need to return refreshed token  
-                //return this.refreshToken();   
+              this.logout();
+             //reloads pages, this knows that token are been deleted and do the logout
+              return this.token ? this.token : "";          
+          }else if(!tokenExpired && this.token!=null){//if token are not expired, we need to return refreshed token               
                return  this.refreshToken();
              }else{               
                throw new Error();
@@ -71,19 +69,19 @@ export class LoginService {
         this.password = JSON.parse(localStorage.getItem('currentUser'))["password"];
       }catch(e){        
       }        
-      try{
+      try{        
         localStorage.removeItem('currentUser')['token'];
-        this.token=null;                
+        this.token=null; 
         this.login(this.username,this.password);
         return this.token ? this.token : "";  
-      }catch(e){       
+      }catch(e){             
         this.login(this.username,this.password);
         return this.token ? this.token : ""; 
       }  
     }
-
-    logout(): void {
+    logout(): void {      
         // clear token remove user from local storage to log user out
         localStorage.removeItem('currentUser');
-    }    
-}
+        window.location.reload();
+    }
+  }

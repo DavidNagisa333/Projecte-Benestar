@@ -20,20 +20,20 @@ export class OrganitzacionsService {
     }); 
 
     addOrganitzacio(item){     
-        var Url = 'http://172.17.10.48:8080/organitzacio/addOrganitzacio?';
+        var Url = 'http://localhost:8080/organitzacio/addOrganitzacio?';
         return this.http
            .post(Url,JSON.stringify(item),{headers:this.headers})
            .map((response: Response ) => {});
     }
     updateOrganitzacio(item){  
-        var Url = 'http://172.17.10.48:8080/organitzacio/updateOrganitzacio?';
+        var Url = 'http://localhost:8080/organitzacio/updateOrganitzacio?';
         return this.http
             .put(Url,JSON.stringify(item),{headers:this.headers})
             .map((response: Response ) => {});
     }
     
     delOrganitzacio(id){  ;   
-    var Url = 'http://172.17.10.48:8080/organitzacio/delOrganitzacio';
+    var Url = 'http://localhost:8080/organitzacio/delOrganitzacio';
     var creds = "?id=" + id;
        return this.http
            .delete(Url,{headers:this.headers})
@@ -41,7 +41,7 @@ export class OrganitzacionsService {
     }        
     
     listOrganitzacio(ipp) {  
-       var Url = 'http://172.17.10.48:8080/organitzacio/listOrganitzacions?itemsPerPage=' + ipp;
+       var Url = 'http://localhost:8080/organitzacio/listOrganitzacions?itemsPerPage=' + ipp;
        return this.http
        .get(Url,{headers:this.headers})
        .map(res => res.json());        
