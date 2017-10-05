@@ -75,7 +75,7 @@ params.set('tipus', prestacio.tipus);
 params.set('descripcio', prestacio.descripcio);
 
 
-    let options = new RequestOptions({ headers: headers });
+    //let options = new RequestOptions({ headers: headers });
     let body = params.toString();
     var headers = new Headers({
         'Content-type': 'application/json',
@@ -83,7 +83,7 @@ params.set('descripcio', prestacio.descripcio);
     });       
         //headers.append('Access-Control-Allow-Origin', '*');  
 
-return this.http.put(this.putUrl + body, options)    
+return this.http.put(this.putUrl + body, body, {headers: headers})    
     //.map((response: Response) => {})
            
 }
