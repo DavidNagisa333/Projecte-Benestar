@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -22,9 +22,12 @@ export class PersonesService {
 
 	constructor(private http: Http, private loginService: LoginService) { }
 
+<<<<<<< HEAD
 
 	// A F E G I R   U N A   P E R S O N A
 
+=======
+>>>>>>> 63324e59de642af22c0da4a816f78c20c6d47fca
 	afegirPersona(persona) {
 
     const url = this.url + "/afegirPersona?";
@@ -41,14 +44,25 @@ export class PersonesService {
 	// L L I S T A R   T O T E S  L E S   P E R S O N E S
 	llistarPersones(ipp, query) {
 
+<<<<<<< HEAD
     query = query ? "&filter=" + query : "&filter=" + "";
     const url = this.url + "/llistarPersones?ipp=" + ipp + query;;
+=======
+>>>>>>> 63324e59de642af22c0da4a816f78c20c6d47fca
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 63324e59de642af22c0da4a816f78c20c6d47fca
     const headers = new Headers({
       'Content-type': 'application/json',
       'Authorization': 'Bearer ' + this.loginService.getToken(),
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 63324e59de642af22c0da4a816f78c20c6d47fca
 
     return this.http
                .get(url, {headers:this.headersCRD})
