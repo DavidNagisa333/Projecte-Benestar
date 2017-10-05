@@ -54,6 +54,7 @@ export class PersonesComponent implements OnInit {
   	numPages: number = 1;
     maxSize: number = 7;
     flag: boolean = true;
+    query: String = "";
 
     constructor(private personaService: PersonesService, private ordre: Ordre) { }
 
@@ -63,7 +64,7 @@ export class PersonesComponent implements OnInit {
 
    refreshData() {
   		this.personaService
-          .llistarPersones(this.itemsPerPage)
+          .llistarPersones(this.itemsPerPage, this.query)
           .subscribe(
             data => {
               this.pagedItems = data.persones;
