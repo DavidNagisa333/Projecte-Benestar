@@ -21,9 +21,5 @@ addOficina(oficina){   var headers = new Headers();
       	return this.http
       			   //.post(url, JSON.stringify(oficina), options)
       			   .post(this.addUrl, body);
-<<<<<<< HEAD
-=======
-
->>>>>>> c24be4f063b3bf0eb508ca7a60a0b4f39cefaa2c
 	}
 }
