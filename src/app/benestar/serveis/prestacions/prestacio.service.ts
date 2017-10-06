@@ -13,10 +13,10 @@ import { LoginService } from '../../../login/login.service';
 export class PrestacioService {
     constructor(private http: Http, private loginService: LoginService) { }
 
-private addUrl = 'http://172.17.0.161:8080/benestar/addPrestacio?';
-private allUrl = 'http://172.17.0.161:8080/benestar/allPrestacio?ipp=';
-private delUrl = 'http://172.17.0.161:8080/benestar/delPrestacio?';
-private putUrl = 'http://172.17.0.161:8080/benestar/putPrestacio?';
+private addUrl = 'http://localhost:8080/benestar/addPrestacio?';
+private allUrl = 'http://localhost:8080/benestar/allPrestacio?ipp=';
+private delUrl = 'http://localhost:8080/benestar/delPrestacio?';
+private putUrl = 'http://localhost:8080/benestar/putPrestacio?';
 
 
 //ADD
@@ -75,7 +75,7 @@ params.set('tipus', prestacio.tipus);
 params.set('descripcio', prestacio.descripcio);
 
 
-    let options = new RequestOptions({ headers: headers });
+    //let options = new RequestOptions({ headers: headers });
     let body = params.toString();
     var headers = new Headers({
         'Content-type': 'application/json',
@@ -83,7 +83,7 @@ params.set('descripcio', prestacio.descripcio);
     });       
         //headers.append('Access-Control-Allow-Origin', '*');  
 
-return this.http.put(this.putUrl + body, options)    
+return this.http.put(this.putUrl + body, body, {headers: headers})    
     //.map((response: Response) => {})
            
 }

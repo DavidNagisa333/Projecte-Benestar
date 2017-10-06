@@ -126,4 +126,4 @@ export class PersonesComponent implements OnInit {
     sort_by(nouOrdre) {
       this.ordre.transform(this.pagedItems, nouOrdre, this.flag);
     }
-}
+  }

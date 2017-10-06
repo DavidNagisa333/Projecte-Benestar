@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -8,7 +8,7 @@ import { LoginService } from '../../login/login.service';
 @Injectable()
 export class PersonesService {
 
-  url = "http://localhost:8080/persona";
+  url = "http://localhost:8080/benestar";
 
   headersU = new Headers({
     'Content-type': 'application/x-www-form-urlencoded',
@@ -22,7 +22,12 @@ export class PersonesService {
 
 	constructor(private http: Http, private loginService: LoginService) { }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c24be4f063b3bf0eb508ca7a60a0b4f39cefaa2c
 	// A F E G I R   U N A   P E R S O N A
+
 	afegirPersona(persona) {
 
     const url = this.url + "/afegirPersona?";
@@ -39,8 +44,32 @@ export class PersonesService {
 	// L L I S T A R   T O T E S  L E S   P E R S O N E S
 	llistarPersones(ipp, query) {
 
+<<<<<<< HEAD
     query = query ? "&filter=" + query : "&filter=" + "";
     const url = this.url + "/llistarPersones?ipp=" + ipp + query;;
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> abc259035cd50f6a655dfeb7db694366a3a6062d
+    query = query ? "&filter=" + query : "&filter=" + "";
+    const url = this.url + "/llistarPersones?ipp=" + ipp + query;;
+
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> abc259035cd50f6a655dfeb7db694366a3a6062d
+    const headers = new Headers({
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + this.loginService.getToken(),
+    });
+<<<<<<< HEAD
+=======
+
+>>>>>>> abc259035cd50f6a655dfeb7db694366a3a6062d
+>>>>>>> c24be4f063b3bf0eb508ca7a60a0b4f39cefaa2c
 
     return this.http
                .get(url, {headers:this.headersCRD})

@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit{
         private loginService: LoginService) {}
 
     ngOnInit() {        
-        this.loginService.logout(); 
     }
 
 
@@ -28,12 +27,9 @@ export class LoginComponent implements OnInit{
         this.loading = true;
         this.loginService.login(this.model.username, this.model.password)
             .subscribe(result => {
-            console.log(result);
                 if (result === true) {
-                    console.log("el resultat es true");
                     window.location.reload();                   
                 } else {                    
-                    console.log("el resultat es false");
                     this.error = 'Username or password is incorrect';
                     this.loading = false;
                 }

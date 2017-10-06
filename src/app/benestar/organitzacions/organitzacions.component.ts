@@ -47,6 +47,7 @@ export class Ordre implements PipeTransform{
 export class OrganitzacionsComponent implements OnInit {
 
     pagedItems = [];   
+    item = {};
     itemsPerPage: number = 5;
     currentPage: number = 1;
     addMode: boolean = false;
@@ -72,7 +73,7 @@ export class OrganitzacionsComponent implements OnInit {
           );
     }
 
-    // A F E G I R   U N A   P E R S O N A
+    // A F E G I R   U N A   O R G A N I T Z A C I O
     addOrganitzacio(item) {
       this.organitzacionsService
           .addOrganitzacio(item)
@@ -80,27 +81,26 @@ export class OrganitzacionsComponent implements OnInit {
       this.addMode = false; 
     }
 
-    // M O D I F I C A R   L E S   D A D E S   D ' U N A   P E R S O N A
+    // M O D I F I C A R   L E S   D A D E S   D ' U N A   O R G A N I T Z A C I O
     updateOrganitzacio(item) {
-      //delete persona["editMode"];
       this.organitzacionsService
           .updateOrganitzacio(item)
           .subscribe(data=> this.refreshData());
     }
 
-    // E S B O R R A R   U N A   P E R S O N A
+    // E S B O R R A R   U N A   O R G A N I T Z A C I O
     delOrganitzacio(item) {
       this.organitzacionsService
           .delOrganitzacio(item.id)
           .subscribe(data=> this.refreshData());
     }
 
-    // switch del formulari modificar equipament
+    // switch del formulari modificar organitzacions
     editMode(item) {
       item.editMode = !item.editMode;
     }
 
-    // switch del formulari afegir equipament
+    // switch del formulari afegir organitzacions
     toogleAddMode() {
       this.addMode = !this.addMode;
     }
