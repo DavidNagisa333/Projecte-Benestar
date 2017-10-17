@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { OficinesRoutingModule } from './oficines-routing.module';
-import { OficinesComponent } from './oficines.component';
+import { OficinesComponent,Ordre } from './oficines.component';
+import { NgxPaginationModule } from 'ngx-pagination'
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
-    CommonModule,
-    OficinesRoutingModule
+    NgxPaginationModule,
+    FormsModule,
+    BrowserModule
   ],
-  declarations: [OficinesComponent]
+  declarations: [
+  	OficinesComponent,
+    Ordre
+    ]
+    
 })
 export class OficinesModule { }

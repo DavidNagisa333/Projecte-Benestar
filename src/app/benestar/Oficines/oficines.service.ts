@@ -1,62 +1,49 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
-
+import {Http,Headers,Response,RequestOptions}  from '@angular/http';
+import {Observable} from 'rxjs/Observable';
+import {LoginService} from '../../login/login.service';
+import { JwtHelper } from 'angular2-jwt';
+//import { JwtHttp } from 'angular2-jwt-refresh';
+import 'rxjs/add/operator/map'
 
 @Injectable()
-export class OficinesService {
+export class OficinesService {    
 
-  constructor(private http: Http) { }
+  JwtHelper = new JwtHelper();
+  constructor(private http: Http,private loginService: LoginService) {}
 
-	// A F E G I R   U N A   P E R S O N A
-	/*afegirOficina(oficina) {
-		let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
-      	let options = new RequestOptions({ headers: headers });
+  token = this.loginService.getToken();
 
-      	const url = "http://172.17.0.242:8080/benestar/addOficina?";
+    private headers = new Headers({
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + this.token,
+    }); 
 
-      	const body = "id=" + oficina.id + "&codiPostal" + oficina.codiPostal + "&poblacio=" + oficina.poblacio + "&Ppovincia=" + oficina.provincia + "&direccio=" + oficina.direccio;
-
-      	return this.http
-      			   //.post(url, JSON.stringify(oficina), options)
-      			   .post(url, body, options);
-                   //.map(res => res.json());
-	}
-
-	// L L I S T A R   T O T E S  L E S   P E R S O N E S
-	llistarOficina(id) {
-
-		const url = "http://172.17.0.242:8080/benestar/allPersones?id=" + id;
-
+    addOficina(item){   
+        var Url = 'http://localhost:8080/oficina/addOficina';
         return this.http
-                   .get(url)
-                   .map(res => res.json());
+           .post(Url,JSON.stringify(item),{headers:this.headers})
+           .map((response: Response ) => {});
     }
-
-	// M O D I F I C A R   U N A   P E R S O N A
-	modOficina(oficina) {
-		const url = "http://172.17.0.242:8080/benestar/updateOficina?";
-
-		const headers = new Headers();
-        //headers.append('Access-Control-Allow-Origin', '*');
-        headers.append('Content-Type', 'application/json');
-
-        const body = "id=" + oficina.id + "&codiPostal" + oficina.codiPostal + "&poblacio=" + oficina.poblacio + "&Ppovincia=" + oficina.provincia + "&direccio=" + oficina.direccio;
-
+    updateOficina(item){  
+        var Url = 'http://localhost:8080/oficina/updateOficina';
         return this.http
-        		   .put(url + body, body, {headers:headers});
-        		   //.map(res => res.json())
-	}
-
-	// E S B O R R A R   U N A   P E R S O N A
-    esborrarOficina(oficina) {
-
-    	const url = "http://172.17.0.242:8080/benestar/deleteOficina?id=" + oficina.id;
-
-    	return this.http
-        		   .delete(url);
-        		   //.map(res => res.json());
-    }*/
+            .put(Url,JSON.stringify(item),{headers:this.headers})
+            .map((response: Response ) => {});
+    }
+    
+    delOficina(id){  ;   
+    var Url = 'http://localhost:8080/oficina/delOficina';
+    var creds = "?id=" + id;
+       return this.http
+           .delete(Url,{headers:this.headers})
+           .map((response: Response) => {});        
+    }        
+    
+    listOficina(ipp) {  
+       var Url = 'http://localhost:8080/oficina/listOficines?itemsPerPage=' + ipp;
+       return this.http
+       .get(Url,{headers:this.headers})
+       .map(res => res.json());        
+    }
 }
